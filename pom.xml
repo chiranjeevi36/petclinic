@@ -272,12 +272,16 @@
             <artifactId>json-simple</artifactId>
         </dependency>
         <dependency>
-   <groupId>com.sun</groupId>
-   <artifactId>tools</artifactId>
-   <version>1.6</version>
-   <scope>system</scope>
-   <systemPath>/usr/lib/jvm/java-11-openjdk-amd64/lib/tools.jar</systemPath>
- </dependency>
+    <groupId>org.apache.struts</groupId>
+    <artifactId>struts2-core</artifactId>
+    <version>${struts2.version}</version>
+    <exclusions>
+        <exclusion>
+            <artifactId>tools</artifactId>
+            <groupId>com.sun</groupId>
+        </exclusion>
+    </exclusions>
+</dependency>
     </dependencies>
 
     <!-- Maven plugin versions are mentioned in order to guarantee the build reproducibility in the long term -->
